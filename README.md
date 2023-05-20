@@ -1,6 +1,7 @@
 # oneXDisconnect
 
 ### Block traffic for the application using the **1xDisconnect**.
+#### Blocking occurs using a firewall, so starting from under the **UAC**.
 
 - 3 modes. 
 - 3 devices.
