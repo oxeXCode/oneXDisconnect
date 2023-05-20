@@ -293,6 +293,7 @@
             txtHotKey.TabIndex = 39;
             txtHotKey.Text = "";
             txtHotKey.TrailingIcon = null;
+            txtHotKey.WordWrap = false;
             // 
             // btnHook
             // 

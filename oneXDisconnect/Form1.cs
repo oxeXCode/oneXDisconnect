@@ -215,7 +215,7 @@ namespace oneXDisconnect
                 hookedDevice.Key = null;
                 BindDeviceHotKey(device, null);
 
-                keyReleasedHandler = async(sender, e) => await HookedDevice_KeyReleased(sender, e);
+                keyReleasedHandler = async (sender, e) => await HookedDevice_KeyReleased(sender, e);
                 hookedDevice.KeyReleased += keyReleasedHandler;
                 hookedDevice.Hook();
             }
@@ -320,6 +320,7 @@ namespace oneXDisconnect
         private bool CheckConfigForStart()
         {
             if (!File.Exists(configManager.ConfigData.rule.path) ||
+                (!configManager.ConfigData.rule.chkIn && !configManager.ConfigData.rule.chkOut) ||
                 (configManager.ConfigData.hookType.type == 2 && configManager.ConfigData.hookType.holderTimer <= 0) ||
                 string.IsNullOrEmpty(GetDeviceHotKeyText((DeviceEnum)configManager.ConfigData.device.type)))
                 return false;
@@ -379,7 +380,7 @@ namespace oneXDisconnect
 
             hookedDevice.KeyPressed -= keyPressedHandler;
             keyPressedHandler = null;
-            
+
             hookedDevice.Unhook();
         }
     }
