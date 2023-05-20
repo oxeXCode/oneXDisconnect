@@ -1,0 +1,20 @@
+{
+  "rule": {
+    "path": "",
+    "chkIn": true,
+    "chkOut": true
+  },
+  "hookType": {
+    "type": 0,
+    "holderTimer": 5
+  },
+  "device": {
+    "type": 0,
+    "keyboard": null,
+    "mouse": null,
+    "controller": null
+  },
+  "settings": {
+    "pollingFrequency": 5
+  }
+}
