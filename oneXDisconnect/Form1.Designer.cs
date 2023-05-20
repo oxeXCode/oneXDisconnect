@@ -192,6 +192,7 @@
             txtAppFilepath.TabIndex = 27;
             txtAppFilepath.Text = "";
             txtAppFilepath.TrailingIcon = null;
+            txtAppFilepath.WordWrap = false;
             // 
             // chkOut
             // 
